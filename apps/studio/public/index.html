@@ -38,6 +38,10 @@
         document.querySelector('meta[property="og:image"]').setAttribute("content", "%PUBLIC_URL%/og?base64=" + params.get('base64'));
         document.querySelector('meta[property="twitter:image"]').setAttribute("content", "%PUBLIC_URL%/og?base64=" + params.get('base64'));
       }
+      if (params.has('url')) {
+        document.querySelector('meta[property="og:image"]').setAttribute("content", "%PUBLIC_URL%/og?url=" + params.get('url'));
+        document.querySelector('meta[property="twitter:image"]').setAttribute("content", "%PUBLIC_URL%/og?url=" + params.get('url'));
+      }
     </script>
   </head>
   <body>
